@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from whoosh.index import open_dir, exists_in
 from whoosh.writing import AsyncWriter
+from analyzers import IndonesianStemFilter
 
 # --- KONFIGURASI MAPPING KOLOM ---
 # Menggunakan kolom dari CSV Anda: Perawi_ID, Nama_Perawi, Nomor_Hadits, Teks_Arab, Terjemahan, Derajat, Bab
@@ -15,8 +16,9 @@ COLUMN_MAPPING = {
     'perawi_id': 'Perawi_ID'     # ID Perawi untuk membantu membuat ID unik
 }
 
-CSV_FILE_PATH = 'data_hadis.csv'  # Path ke file CSV Anda
-INDEX_DIR = "../../data/index"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_FILE_PATH = os.path.join(BASE_DIR, 'data_hadis.csv')
+INDEX_DIR = os.path.join(BASE_DIR, "../../data/index")
 
 def ingest_data():
     if not os.path.exists(CSV_FILE_PATH):

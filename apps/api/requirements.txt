@@ -4,3 +4,4 @@ whoosh
 python-multipart
 pydantic
 pandas
+PySastrawi

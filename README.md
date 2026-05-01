@@ -62,23 +62,23 @@ pnpm install
 ```
 
 ### 3. Setup Backend
-Masuk ke direktori API dan buat virtual environment:
+Buat virtual environment di direktori utama:
 ```bash
-cd apps/api
-python -m venv venv
-source venv/Scripts/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+python -m venv .venv
+source .venv/Scripts/activate  # Windows: .venv\Scripts\activate
+./.venv/Scripts/python -m pip install -r apps/api/requirements.txt
 ```
 
 ### 4. Inisialisasi Data
-Pastikan Anda memiliki file `data_hadis.csv` di folder `apps/api/`. Kemudian jalankan:
+Pastikan Anda sudah meletakkan file `data_hadis.csv` di folder `apps/api/`. Kemudian jalankan perintah ini langsung dari direktori utama:
 ```bash
 # Inisialisasi index baru
-python init_index.py
+./.venv/Scripts/python apps/api/init_index.py
 
 # Masukkan data dari CSV ke index
-python ingest_data.py
+./.venv/Scripts/python apps/api/ingest_data.py
 ```
+*Script ini sudah dikonfigurasi untuk mendeteksi lokasi file secara otomatis meskipun dijalankan dari direktori utama.*
 
 ### 5. Menjalankan Aplikasi
 Kembali ke root direktori dan jalankan semua layanan secara bersamaan:

@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from whoosh.index import open_dir, exists_in
 from whoosh.qparser import MultifieldParser, OrGroup
 from whoosh.highlight import HtmlFormatter, ContextFragmenter
+from analyzers import IndonesianStemFilter
 
 app = FastAPI(title="Takhrij API")
 

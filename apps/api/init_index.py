@@ -1,7 +1,7 @@
 import os
 from whoosh.index import create_in
 from whoosh.fields import Schema, TEXT, ID, NUMERIC
-from whoosh.analysis import StemmingAnalyzer
+from analyzers import get_id_analyzer
 
 # Simple schema
 schema = Schema(
@@ -10,11 +10,12 @@ schema = Schema(
     bab=TEXT(stored=True),
     nomor=NUMERIC(stored=True),
     arab=TEXT(stored=True),
-    terjemahan=TEXT(stored=True, analyzer=StemmingAnalyzer()),
+    terjemahan=TEXT(stored=True, analyzer=get_id_analyzer()),
     derajat=ID(stored=True)
 )
 
-INDEX_DIR = "../../data/index"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+INDEX_DIR = os.path.join(BASE_DIR, "../../data/index")
 
 def init_index():
     if not os.path.exists(INDEX_DIR):
