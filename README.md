@@ -5,7 +5,6 @@ Takhrij adalah mesin pencari hadis yang cepat, akurat, dan modern. Dirancang unt
 ## 🚀 Fitur Utama
 
 - **Pencarian Cepat**: Menggunakan engine Whoosh untuk pencarian teks yang sangat responsif.
-- **Koreksi Typo (Did you mean?)**: Memberikan saran kata kunci jika terjadi kesalahan pengetikan.
 - **Hadis Serupa**: Menemukan hadis-hadis yang berkaitan secara kontekstual menggunakan algoritma *More Like This*.
 - **Filter Kitab**: Memfilter hasil pencarian berdasarkan kitab-kitab perawi tertentu.
 - **Detail Hadis Komprehensif**: Menampilkan teks Arab asli, terjemahan, derajat hadis, dan bab terkait.
@@ -52,7 +51,7 @@ Pastikan Anda sudah menginstal:
 
 ### 2. Persiapan Data
 Proyek ini membutuhkan file dataset hadis dalam format CSV agar mesin pencari dapat bekerja.
-1. Unduh file `data_hadis.csv` dari [Link Google Drive Ini](https://example.com/link-gdrive-anda).
+1. Unduh file `data_hadis.csv` dari [Link Google Drive Ini](https://drive.google.com/drive/folders/1j1nOEUV5KxFINxL4NSgw5EwbYgzlAaL3?usp=sharing).
 2. Letakkan file tersebut di dalam direktori: `apps/api/`
 3. Pastikan nama file tetap `data_hadis.csv`.
 
