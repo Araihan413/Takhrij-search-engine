@@ -1,0 +1,17 @@
+{
+  "name": "takhrij-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "dev:api": "cd apps/api && python -m uvicorn main:app --reload",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "prettier": "latest"
+  }
+}
